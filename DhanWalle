@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Executive Cx Terminal</title>
+    <title>DhanWalle Process</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -167,11 +167,11 @@
     <div class="terminal-wrapper">
         <div class="header-section">
             <div>
-                <span>FINANCIAL TERMINAL v3.1</span>
-                <h1>Portfolio Recovery</h1>
+                <span>DHANWALLE PROCESS</span>
+                <h1>Customers Portfolio</h1>
             </div>
             <div style="text-align: right;">
-                <span id="date-now">Q1 FISCAL 2026</span>
+                <span id="date-now">March - April</span>
             </div>
         </div>
 
@@ -230,11 +230,11 @@
                     </tr>
                     <tr>
                         <td>
-                            <span class="customer-name">DHEERAJ KUMAR</span>
-                            <span class="customer-id">ID: 9582073420</span>
+                            <span class="customer-name"></span>
+                            <span class="customer-id">ID: </span>
                         </td>
-                        <td><span class="amount-highlight">₹69,840</span></td>
-                        <td><span class="badge badge-remark">26TH FOLLOWUP</span></td>
+                        <td><span class="amount-highlight">₹</span></td>
+                        <td><span class="badge badge-remark"></span></td>
                         <td><a href="#" class="btn-view">ACCESS</a></td>
                     </tr>
                 </tbody>
