@@ -12,10 +12,47 @@
             padding: 40px;
         }
 
+        /* New Header Layout */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto 25px auto;
+        }
+
         h2 {
-            text-align: center;
-            margin-bottom: 25px;
+            margin: 0;
             color: #2c3e50;
+            font-size: 24px;
+        }
+
+        /* Premium Next Page Button */
+        .next-btn {
+            background: #2c3e50;
+            color: #ffffff !important; /* Overriding global 'a' color */
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .next-btn:hover {
+            background: #34495e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            text-decoration: none !important;
+        }
+
+        .next-btn::after {
+            content: '→';
+            font-size: 18px;
         }
 
         .table-container {
@@ -24,6 +61,8 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             overflow-x: auto;
             padding: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         table {
@@ -36,7 +75,7 @@
             color: #ffffff;
             padding: 14px;
             text-transform: uppercase;
-            font-size: 14px;
+            font-size: 13px;
             letter-spacing: 0.5px;
         }
 
@@ -44,6 +83,8 @@
             padding: 12px;
             text-align: center;
             color: #333;
+            font-size: 14px;
+            border-bottom: 1px solid #eee;
         }
 
         tr:nth-child(even) {
@@ -62,19 +103,20 @@
 
         .remark {
             background: #ffeaa7;
-            padding: 6px 10px;
+            padding: 4px 12px;
             border-radius: 20px;
             font-weight: bold;
             display: inline-block;
+            font-size: 12px;
         }
 
-        a {
+        .open-link {
             color: #3498db;
             text-decoration: none;
             font-weight: bold;
         }
 
-        a:hover {
+        .open-link:hover {
             text-decoration: underline;
         }
     </style>
@@ -82,7 +124,10 @@
 
 <body>
 
-    <h2>📋 Cx Details for Follow-up</h2>
+    <div class="header-container">
+        <h2>📋 PayRupik follow-up Cx Details</h2>
+        <a href="DhanWalle" class="next-btn">DhanWalle Process</a>
+    </div>
 
     <div class="table-container">
         <table>
