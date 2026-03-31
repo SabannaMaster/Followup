@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Profile - PATEL PARTH</title>
+    <style>
+        :root {
+            --primary-blue: #2c3e50;
+            --accent-blue: #3498db;
+            --light-gray: #f4f7f6;
+            --border-color: #dcdde1;
+            --text-dark: #2f3640;
+            --text-muted: #7f8c8d;
+            --warning-yellow: #ffc107;
+            --danger-red: #c0392b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-gray);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+        }
+
+        .status-badge {
+            background-color: #e1b12c;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .info-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 18px;
+            border-radius: 8px;
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            font-size: 15px;
+            color: var(--accent-blue);
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .value {
+            font-weight: 500;
+            text-align: right;
+            max-width: 65%;
+        }
+
+        .full-width { grid-column: span 2; }
+
+        .highlight-red {
+            color: var(--danger-red);
+            font-weight: bold;
+        }
+
+        .remarks-box {
+            background: #fff8e1;
+            padding: 15px;
+            border-left: 5px solid var(--warning-yellow);
+            margin-top: 25px;
+            border-radius: 4px;
+        }
+
+        .no-print { text-align: right; margin-bottom: 10px; }
+        
+        button {
+            padding: 8px 15px;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        @media print { .no-print { display: none; } }
+        @media (max-width: 600px) { .grid-layout { grid-template-columns: 1fr; } .full-width { grid-column: span 1; } }
+    </style>
+</head>
+<body>
+
+<div class="no-print">
+    <button onclick="window.print()">Download PDF</button>
+</div>
+
+<div class="container">
+    <div class="header">
+        <div>
+            <h1>PATEL PARTH</h1>
+            <small>Loan No: <strong>DFTLVAN00000001937</strong></small>
+        </div>
+        <div class="status-badge">Disposition: PTP</div>
+    </div>
+
+    <div class="grid-layout">
+        <div class="info-card">
+            <h3>Contact Information</h3>
+            <div class="data-row"><span class="label">Mobile:</span><span class="value">9274922321</span></div>
+            <div class="data-row"><span class="label">Email:</span><span class="value">PARTHPATEL38383@GMAIL.COM</span></div>
+            <div class="data-row"><span class="label">State:</span><span class="value">Gujarat</span></div>
+        </div>
+
+        <div class="info-card">
+            <h3>Banking Details</h3>
+            <div class="data-row"><span class="label">Bank Name:</span><span class="value">BANK OF INDIA</span></div>
+            <div class="data-row"><span class="label">IFSC Code:</span><span class="value">BKID0002921</span></div>
+            <div class="data-row"><span class="label">Agent:</span><span class="value">Sabanna E</span></div>
+        </div>
+
+        <div class="info-card">
+            <h3>Loan Summary</h3>
+            <div class="data-row"><span class="label">Loan Amount:</span><span class="value">₹50,000</span></div>
+            <div class="data-row"><span class="label">Net Disbursed:</span><span class="value">₹42,500</span></div>
+            <div class="data-row"><span class="label">Total Repay:</span><span class="value highlight-red">₹65,000</span></div>
+            <div class="data-row"><span class="label">Due Days:</span><span class="value highlight-red">82 Days</span></div>
+        </div>
+
+        <div class="info-card">
+            <h3>Fees & Taxes</h3>
+            <div class="data-row"><span class="label">Admin Fee (15%):</span><span class="value">₹7,500</span></div>
+            <div class="data-row"><span class="label">IGST:</span><span class="value">₹1,144.07</span></div>
+            <div class="data-row"><span class="label">Processing:</span><span class="value">₹6,355.93</span></div>
+            <div class="data-row"><span class="label">ROI / Tenure:</span><span class="value">0.75% / 40 Days</span></div>
+        </div>
+
+        <div class="info-card full-width">
+            <div style="display: flex; justify-content: space-around;">
+                <div style="text-align: center;">
+                    <p class="label">Disbursement Date</p>
+                    <span class="value">21-11-2025</span>
+                </div>
+                <div style="text-align: center;">
+                    <p class="label">Repayment Date</p>
+                    <span class="value">31-12-2025</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card full-width">
+            <h3>Addresses</h3>
+            <div class="data-row" style="flex-direction: column; margin-bottom: 15px;">
+                <span class="label">House Address:</span>
+                <span class="value" style="text-align: left; max-width: 100%; margin-top: 5px;">
+                    BRAMHAN FALIYU NEAR SUNIL SALAT, MAKARPURA VADODARA GUJARAT 390013.
+                </span>
+            </div>
+            <div class="data-row" style="flex-direction: column;">
+                <span class="label">Office Address:</span>
+                <span class="value" style="text-align: left; max-width: 100%; margin-top: 5px;">
+                    TEAM LEASE SERVICES LTD 931 GIDC MAKARPURA BSNL OPP MAKARPURA VADODARA 390010.
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="remarks-box">
+        <strong>Remark:</strong> Tomorrow loan close.
+    </div>
+</div>
+
+</body>
+</html>
