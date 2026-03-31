@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Profile - Ambadas Sawant</title>
+    <style>
+        :root {
+            --primary-blue: #2c3e50;
+            --accent-blue: #3498db;
+            --light-gray: #f4f7f6;
+            --border-color: #dcdde1;
+            --text-dark: #2f3640;
+            --text-muted: #7f8c8d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-gray);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: var(--primary-blue);
+        }
+
+        .status-badge {
+            background-color: #e1b12c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .info-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            font-size: 16px;
+            color: var(--accent-blue);
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 8px;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .value {
+            font-weight: 500;
+            text-align: right;
+            max-width: 60%;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        .highlight {
+            color: #c0392b;
+            font-weight: bold;
+        }
+
+        .remarks-box {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 5px solid #ffc107;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .grid-layout { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div>
+            <h1>AMBADAS SUKHADEV SAWANT</h1>
+            <small>Loan No: <strong>DFTLVAN00000000955</strong></small>
+        </div>
+        <div class="status-badge">Disposition: PTP</div>
+    </div>
+
+    <div class="grid-layout">
+        <div class="info-card">
+            <h3>Contact Information</h3>
+            <div class="data-row">
+                <span class="label">Mobile:</span>
+                <span class="value">9890126774</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Email:</span>
+                <span class="value">ASAWANT2004@YAHOO.COM</span>
+            </div>
+            <div class="data-row">
+                <span class="label">State:</span>
+                <span class="value">Maharashtra</span>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h3>Banking Details</h3>
+            <div class="data-row">
+                <span class="label">Bank Name:</span>
+                <span class="value">UNION BANK OF INDIA</span>
+            </div>
+            <div class="data-row">
+                <span class="label">IFSC Code:</span>
+                <span class="value">UBIN0554138</span>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h3>Loan Summary</h3>
+            <div class="data-row">
+                <span class="label">Loan Amount:</span>
+                <span class="value">₹35,000</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Net Disbursed:</span>
+                <span class="value">₹31,500</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Total Repay Amount:</span>
+                <span class="value highlight">₹46,900</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Due Days:</span>
+                <span class="value highlight">112 Days</span>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h3>Fees & Charges</h3>
+            <div class="data-row">
+                <span class="label">Admin Fee (10%):</span>
+                <span class="value">₹3,500</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Processing Fee:</span>
+                <span class="value">₹2,966.10</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Tenure / ROI:</span>
+                <span class="value">34 Months / 1%</span>
+            </div>
+        </div>
+
+        <div class="info-card full-width">
+            <div style="display: flex; justify-content: space-around;">
+                <div style="text-align: center;">
+                    <p class="label" style="margin-bottom: 5px;">Disbursement Date</p>
+                    <span class="value">28-10-2025</span>
+                </div>
+                <div style="text-align: center;">
+                    <p class="label" style="margin-bottom: 5px;">Repayment Date</p>
+                    <span class="value">01-12-2025</span>
+                </div>
+                <div style="text-align: center;">
+                    <p class="label" style="margin-bottom: 5px;">Agent Assigned</p>
+                    <span class="value">Sabanna E</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card full-width">
+            <h3>Addresses</h3>
+            <div class="data-row" style="flex-direction: column; margin-bottom: 15px;">
+                <span class="label">House Address:</span>
+                <span class="value" style="text-align: left; max-width: 100%; margin-top: 5px;">
+                    ARYAVEDANT RESIDENCY FLAT NO 202 C WING RAHATANI LINK ROAD, NEAR SAI COLONY, RAHATANI, PIMPRI-CHINCHWAD, PUNE-411017.
+                </span>
+            </div>
+            <div class="data-row" style="flex-direction: column;">
+                <span class="label">Office Address:</span>
+                <span class="value" style="text-align: left; max-width: 100%; margin-top: 5px;">
+                    INTORQ INDIA PRIVATE LIMITED PLOT NO E-2 7 CHAKAN INDUSTRIAL AREA PHASE-3 KHARABWADI. PIN CODE- 410501.
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="remarks-box">
+        <strong>Remark:</strong> 1st April full payment expected.
+    </div>
+</div>
+
+</body>
+</html>
