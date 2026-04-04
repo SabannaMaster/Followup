@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Profile - B LAKSHMI NARAYANA DEEPAK</title>
+    <style>
+        :root {
+            --primary-blue: #2c3e50;
+            --accent-blue: #3498db;
+            --light-gray: #f4f7f6;
+            --border-color: #dcdde1;
+            --text-dark: #2f3640;
+            --text-muted: #7f8c8d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-gray);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: var(--primary-blue);
+        }
+
+        .status-badge {
+            background-color: #27ae60; /* Changed to green for "Paid" status */
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .info-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            font-size: 16px;
+            color: var(--accent-blue);
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 8px;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .value {
+            font-weight: 500;
+            text-align: right;
+            max-width: 60%;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        .highlight {
+            color: #c0392b;
+            font-weight: bold;
+        }
+
+        .remarks-box {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 5px solid #ffc107;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .grid-layout { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div>
+            <h1>B LAKSHMI NARAYANA DEEPAK</h1>
+            <small>Loan No: <strong>DFTLVAN00000001282</strong></small>
+        </div>
+        <div class="status-badge">Disposition: Paid</div>
+    </div>
+
+    <div class="grid-layout">
+        <div class="info-card">
+            <h3>Contact Information</h3>
+            <div class="data-row">
+                <span class="label">Mobile:</span>
+                <span class="value">9652977845</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Email:</span>
+                <span class="value">HEMPRA10@GMAIL.COM</span>
+            </div>
+            <div class="data-row">
+                <span class="label">State:</span>
+                <span class="value">Telangana</span>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h3>Banking Details</h3>
+            <div class="data-row">
+                <span class="label">Bank Name:</span>
+                <span class="value">HDFC BANK</span>
+            </div>
+            <div class="data-row">
+                <span class="label">IFSC Code:</span>
+                <span class="value">HDFC0001555</span>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h3>Loan Summary</h3>
+            <div class="data-row">
+                <span class="label">Loan Amount:</span>
+                <span class="value">₹75,000</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Net Disbursed:</span>
+                <span class="value">₹64,500</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Total Repay Amount:</span>
+                <span class="value highlight">₹90,750</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Due Days:</span>
+                <span class="value highlight">114 Days</span>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h3>Fees & Charges</h3>
+            <div class="data-row">
+                <span class="label">Total Admin Fee (14%):</span>
+                <span class="value">₹10,500</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Processing Fee:</span>
+                <span class="value">₹8,898.31</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Tenure / ROI:</span>
+                <span class="value">28 Months / 0.75%</span>
+            </div>
+        </div>
+
+        <div class="info-card full-width">
+            <div style="display: flex; justify-content: space-around;">
+                <div style="text-align: center;">
+                    <p class="label" style="margin-bottom: 5px;">Disbursement Date</p>
+                    <span class="value">01-11-2025</span>
+                </div>
+                <div style="text-align: center;">
+                    <p class="label" style="margin-bottom: 5px;">Repayment Date</p>
+                    <span class="value">29-11-2025</span>
+                </div>
+                <div style="text-align: center;">
+                    <p class="label" style="margin-bottom: 5px;">Agent Assigned</p>
+                    <span class="value">Sabanna E</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card full-width">
+            <h3>Addresses</h3>
+            <div class="data-row" style="flex-direction: column; margin-bottom: 15px;">
+                <span class="label">House Address:</span>
+                <span class="value" style="text-align: left; max-width: 100%; margin-top: 5px;">
+                    PLOT NO -233, FLAT NO- 301, ARCA HOMES, DEFENCE COLONY, SAINKPURI, SECUNDERABAD - 500094
+                </span>
+            </div>
+            <div class="data-row" style="flex-direction: column;">
+                <span class="label">Office Address:</span>
+                <span class="value" style="text-align: left; max-width: 100%; margin-top: 5px;">
+                    SYNGENE INTERNATIONAL LI. KNOWLEDGE SQUARE PARK PLOT NO 7, SURVEY NO 542 MN PARK GENOME VALLEY KOLTHUR SHAMIRPET HYDERABAD TELANGANA JIGANI LINK ROAD BANGALORE-500077
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="remarks-box">
+        <strong>Remark:</strong> cx paid part amount 10000.
+    </div>
+</div>
+
+</body>
+</html>
